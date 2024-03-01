@@ -49,17 +49,14 @@
         overflow: hidden;
         background: #fff;
       }
-
-      #bg-exit {
-        cursor: pointer;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-      }
       #banner {
-        width: 600px;
-        height: 300px;
+        position: absolute;
+        left: -1px;
+        top: -1px; 
+        width:300px;
+        height:600px;
+        cursor: pointer !important;
+        z-index: 100;
       }
       div,
       img {
@@ -76,7 +73,7 @@
         left: -300px;
       }
       #copy2{
-        right: -600px;
+        left: 129px;
       }
       .retina {
           -webkit-transform: scale(0.5, 0.5);
@@ -88,17 +85,23 @@
           -ms-transform-origin: left top;
           transform-origin: left top;
       }
+      .bg{
+        z-index: -1;
+      }
+      #cta, #copy2, #logo{
+        z-index: 1;
+      }
     </style>
   </head>
   <body class="animate"  onload="init();">
     <div id="main-container">
       <div id="banner">
-        <img src="./images/bg.jpg" class="" alt="">
         <img src="./images/photo.png" class="" alt="">
         <img src="./images/copy1.png" id="copy1" class="retina hidden" alt="">
         <img src="./images/copy2.png" id="copy2" class="retina hidden" alt="">
         <img src="./images/cta.png" id="cta" class="retina hidden" alt="">
-        <img src="./images/logo.png" class="retina" alt="">
+        <img src="./images/logo.png" class="retina logo" alt="">
+        <img src="./images/bg.png" class="" alt="">
       </div>
     </div>
 
@@ -112,8 +115,10 @@
         }
 
         function show() {
-            tl.to(copy1,1,{ ease: "power1.out", autoAlpha:1, left:0 },"+=0.5");
-            tl.to(copy2,1,{ ease: "power1.out", autoAlpha:1,  right:0},"+=0.5");
+            tl.to(copy1,1,{ ease: "power1.out", autoAlpha:1, left:0},"+=0.5");
+
+
+            tl.to(copy2,1,{ ease: "power1.out", autoAlpha:1,  left:0},"+=0.5");
             tl.to(cta,1,{ ease: "power1.out", autoAlpha:1},"+=0.5");
         }
         function endTime() {

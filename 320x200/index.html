@@ -50,16 +50,14 @@
         background: #fff;
       }
 
-      #bg-exit {
-        cursor: pointer;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-      }
       #banner {
-        width: 320px;
-        height: 200px;
+        position: absolute;
+        left: -1px;
+        top: -1px; 
+        width:320px;
+        height:200px;
+        cursor: pointer !important;
+        z-index: 100;
       }
       div,
       img {
@@ -88,20 +86,21 @@
           -ms-transform-origin: left top;
           transform-origin: left top;
       }
-      #cta, .logo, .photo{
-        left: -1px;
+      
+      #cta, #copy2, .logo{
+        z-index: 1;
       }
     </style>
   </head>
   <body class="animate"  onload="init();">
     <div id="main-container">
       <div id="banner">
-        <img src="./images/bg.jpg" class="" alt="">
-        <img src="./images/photo.png" class="photo" alt="">
+        <img src="./images/photo.png" class="" alt="">
         <img src="./images/copy1.png" id="copy1" class="retina hidden" alt="">
         <img src="./images/copy2.png" id="copy2" class="retina hidden" alt="">
         <img src="./images/cta.png" id="cta" class="retina hidden" alt="">
         <img src="./images/logo.png" class="retina logo" alt="">
+        <img src="./images/bg.png" class="" alt="">
       </div>
     </div>
 

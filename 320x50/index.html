@@ -50,8 +50,13 @@
         background: #fff;
       }
       #banner {
-        width: 320px;
-        height: 50px;
+        position: absolute;
+        left: -1px;
+        top: -1px; 
+        width:320px;
+        height:50px;
+        cursor: pointer !important;
+        z-index: 100;
       }
       div,
       img {
@@ -79,6 +84,12 @@
           -moz-transform-origin: left top;
           -ms-transform-origin: left top;
           transform-origin: left top;
+      }
+      .bg{
+        z-index: -1;
+      }
+      #cta, .logo{
+        z-index: 1;
       }
     </style>
   </head>
